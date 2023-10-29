@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { templateData } from '@/constants/WFHemailTemplate';
+import { templateSignature } from '@/constants/WFHemailTemplate';
 
 const EmailGenerator = () => {
   const [selectedTemplate, setSelectedTemplate] = useState('loginMail');
@@ -45,7 +46,7 @@ const EmailGenerator = () => {
       .replace('{additionalTime}', additionalTime);
 
     setEmailSubject(template.subject.replace('{date}', formattedDate).replace('{time}', time));
-    setEmailBody(modifiedEmailBody);
+    setEmailBody(modifiedEmailBody + templateSignature.body);
   };
 
   return (
