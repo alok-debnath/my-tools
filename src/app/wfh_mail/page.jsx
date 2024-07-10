@@ -130,20 +130,18 @@ const EmailGenerator = () => {
                   }}
                 />
               </div>
-              <div className='mockup-code mb-3 mt-2'>
-                <div className='px-5'>
-                  <div className='textarea textarea-bordered'>
-                    <p
-                      className='font-small text-base-content'
-                      dangerouslySetInnerHTML={{ __html: emailSubject }}
-                    />
-                  </div>
-                  <div className='textarea textarea-bordered'>
-                    <p
-                      className='font-small text-base-content'
-                      dangerouslySetInnerHTML={{ __html: emailBody.replace(/\n/g, '<br>') }}
-                    />
-                  </div>
+              <div className='bg-primary/20 rounded-xl space-y-3 p-5 my-2'>
+                <div className='textarea textarea-bordered'>
+                  <p
+                    className='font-small text-base-content'
+                    dangerouslySetInnerHTML={{ __html: emailSubject }}
+                  />
+                </div>
+                <div className='textarea textarea-bordered'>
+                  <p
+                    className='font-small text-base-content'
+                    dangerouslySetInnerHTML={{ __html: emailBody.replace(/\n/g, '<br>') }}
+                  />
                 </div>
               </div>
               <button
